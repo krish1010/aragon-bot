@@ -1,1 +1,1 @@
-worker: python3 aragon_engine.py
+worker: python aragon_engine.py
