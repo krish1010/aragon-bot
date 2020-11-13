@@ -1,3 +1,5 @@
+"""Star Wars Quotes module."""
+
 import requests
 
 from card import make_card
@@ -7,6 +9,13 @@ THUMBNAIL = 'https://cdn.pixabay.com/photo/2015/12/13/12/58/yoda-1091030_960_720
 
 
 def generate_quote():
+    """Generate random quotes from Star Wars.
+
+    Returns
+    --------
+        card: discord.Embed
+            Card cointaining random quote from Star Wars.
+    """
     headers = {
         'accept': 'text/plain'
     }
