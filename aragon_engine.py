@@ -16,7 +16,7 @@ from yoda_translate import generate_translation
 bot = commands.Bot(command_prefix='$')
 
 
-@bot.command(name='allah')
+@bot.command(name='allah', help='A greeting message')
 async def allah(ctx):
     """Greeting message.
 
@@ -29,12 +29,12 @@ async def allah(ctx):
         message: str
             Greeting message.
     """
-    message = 'Bismillah hir rahman rahim'
+    message = 'Bismillah, ar-Rahman, ar-Rahim'
 
     await ctx.send(message)
 
 
-@bot.command(name='covid')
+@bot.command(name='covid', help='Latest COVID-19 statistics. Usage: $covid (country_name)')
 async def covid(ctx, *args):
     """COVID-19 statistics.
 
@@ -53,7 +53,7 @@ async def covid(ctx, *args):
     await ctx.send(embed=card)
 
 
-@bot.command(name='hazrat')
+@bot.command(name='hazrat', help="Relive some og Gangs of Wassepur's best dialogues!")
 async def hazrat(ctx):
     """Generate random dialogues from Gangs of Wassepur.
 
@@ -70,7 +70,7 @@ async def hazrat(ctx):
     await ctx.send(embed=card)
 
 
-@bot.command(name='toss')
+@bot.command(name='toss', help="Can't decide what to do? $toss is there just to get you out of misery.")
 async def toss(ctx):
     """Toss a coin.
 
@@ -87,7 +87,7 @@ async def toss(ctx):
     await ctx.send(embed=card)
 
 
-@bot.command(name='meme')
+@bot.command(name='meme', help='Memes commands available: ida, granny, success, why, obama, evil, cry. Usage: $meme (top_text), (bottom_text)')
 async def meme(ctx, name, *args):
     """Generate meme with arguments.
 
@@ -106,7 +106,7 @@ async def meme(ctx, name, *args):
     await ctx.send(file=file, embed=card)
 
 
-@bot.command(name='shakeabuse')
+@bot.command(name='shakeabuse', help='How would Shakespeare abuse someone?...Hmm?...')
 async def shakeabuse(ctx):
     """Generate random abuses.
 
@@ -123,7 +123,7 @@ async def shakeabuse(ctx):
     await ctx.send(embed=card)
 
 
-@bot.command(name='pic')
+@bot.command(name='pic', help='See your awesome display picture!')
 async def pic(ctx):
     """Display profile picture.
 
@@ -140,7 +140,7 @@ async def pic(ctx):
     await ctx.send(sender.avatar_url)
 
 
-@bot.command(name='insult')
+@bot.command(name='insult', help='Want to insult someone? Type $insult (name) and enjoy!')
 async def insult(ctx, name):
     """Generate random insults.
 
@@ -159,7 +159,7 @@ async def insult(ctx, name):
     await ctx.send(embed=card)
 
 
-@bot.command(name='spell')
+@bot.command(name='spell', help='Are you a muggle or a wizard? Hit $spell and try!')
 async def spell(ctx):
     """Generate random spells from Harry Potter.
 
