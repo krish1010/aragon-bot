@@ -193,7 +193,7 @@ async def jedi(ctx):
     await ctx.send(embed=card)
 
 
-@bot.command(name='yoda')
+@bot.command(name='yoda', help='Translates text in a way Yoda would speak! ')
 async def yoda(ctx, *args):
     """Translate message to Yodish.
 
