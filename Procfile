@@ -1,0 +1,1 @@
+worker: python3 aragon_engine.py
