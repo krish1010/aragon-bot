@@ -53,7 +53,7 @@ async def covid(ctx, *args):
     await ctx.send(embed=card)
 
 
-@bot.command(name='hazrat', help="Relive some og Gangs of Wassepur's best dialogues!")
+@bot.command(name='hazrat', help="Relive some of Gangs of Wassepur's best dialogues!")
 async def hazrat(ctx):
     """Generate random dialogues from Gangs of Wassepur.
 
