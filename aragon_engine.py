@@ -34,7 +34,7 @@ async def allah(ctx):
     await ctx.send(message)
 
 
-@bot.command(name='covid', help='Latest COVID-19 statistics. Usage: $covid (country_name)')
+@bot.command(name='covid', help='Latest COVID-19 statistics. Usage: $covid <country_name>')
 async def covid(ctx, *args):
     """COVID-19 statistics.
 
@@ -87,7 +87,7 @@ async def toss(ctx):
     await ctx.send(embed=card)
 
 
-@bot.command(name='meme', help='Memes commands available: ida, granny, success, why, obama, evil, cry. Usage: $meme (top_text), (bottom_text)')
+@bot.command(name='meme', help='Meme commands available: ida, granny, success, why, obama, evil, cry. Usage: $meme <top_text>, <bottom_text>')
 async def meme(ctx, name, *args):
     """Generate meme with arguments.
 
@@ -140,7 +140,7 @@ async def pic(ctx):
     await ctx.send(sender.avatar_url)
 
 
-@bot.command(name='insult', help='Want to insult someone? Type $insult (name) and enjoy!')
+@bot.command(name='insult', help='Want to insult someone? Type $insult <name> and enjoy!')
 async def insult(ctx, name):
     """Generate random insults.
 
