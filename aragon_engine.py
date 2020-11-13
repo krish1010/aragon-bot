@@ -1,7 +1,5 @@
 """Discord Aragon-Bot."""
 
-import discord
-import requests
 from discord.ext import commands
 
 from coin import flip
@@ -28,7 +26,7 @@ async def allah(ctx):
             channel from which command is called.
     Returns
     -------
-        message: str 
+        message: str
             Greeting message.
     """
     message = 'Bismillah hir rahman rahim'
@@ -48,7 +46,7 @@ async def covid(ctx, *args):
             Name of country
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card containing COVID-19 information for a particular country.
     """
     card = covid_stats(*args)
@@ -58,14 +56,14 @@ async def covid(ctx, *args):
 @bot.command(name='hazrat')
 async def hazrat(ctx):
     """Generate random dialogues from Gangs of Wassepur.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining random dialogue from Gangs of Wassepur.
     """
     card = choose_dialog()
@@ -75,14 +73,14 @@ async def hazrat(ctx):
 @bot.command(name='toss')
 async def toss(ctx):
     """Toss a coin.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining Heads/Tails along with a picture.
     """
     card = flip()
@@ -92,7 +90,7 @@ async def toss(ctx):
 @bot.command(name='meme')
 async def meme(ctx, name, *args):
     """Generate meme with arguments.
-    
+
     Parameters
     -----------
         ctx: object
@@ -101,7 +99,7 @@ async def meme(ctx, name, *args):
             Top and bottom text for memes.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining generated meme.
     """
     file, card = meme_builder(name, *args)
@@ -111,14 +109,14 @@ async def meme(ctx, name, *args):
 @bot.command(name='shakeabuse')
 async def shakeabuse(ctx):
     """Generate random abuses.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining an abuse.
     """
     card = generate_abuse()
@@ -128,14 +126,14 @@ async def shakeabuse(ctx):
 @bot.command(name='pic')
 async def pic(ctx):
     """Display profile picture.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        url: str 
+        url: str
             Profile picture.
     """
     sender = ctx.message.author
@@ -145,7 +143,7 @@ async def pic(ctx):
 @bot.command(name='insult')
 async def insult(ctx, name):
     """Generate random insults.
-    
+
     Parameters
     -----------
         ctx: object
@@ -154,7 +152,7 @@ async def insult(ctx, name):
             Name of the person to be insulted.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining an insult.
     """
     card = generate_insult(name)
@@ -164,14 +162,14 @@ async def insult(ctx, name):
 @bot.command(name='spell')
 async def spell(ctx):
     """Generate random spells from Harry Potter.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining spell and its explanation.
     """
     card = choose_spell()
@@ -181,14 +179,14 @@ async def spell(ctx):
 @bot.command(name='jedi')
 async def jedi(ctx):
     """Generate random quotes from Star Wars.
-    
+
     Parameters
     -----------
         ctx: object
             The channel from which command is called.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining random quote from Star Wars.
     """
     card = generate_quote()
@@ -198,7 +196,7 @@ async def jedi(ctx):
 @bot.command(name='yoda')
 async def yoda(ctx, *args):
     """Translate message to Yodish.
-    
+
     Parameters
     -----------
         ctx: object
@@ -207,7 +205,7 @@ async def yoda(ctx, *args):
             Message to be translated to Yodish.
     Returns
     --------
-        card: discord.Embed 
+        card: discord.Embed
             Card cointaining 'Yodish' translated message.
     """
     card = generate_translation(*args)
