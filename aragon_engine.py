@@ -1,9 +1,10 @@
 """Discord Aragon-Bot."""
 
+import os
+
 from discord.ext import commands
 
 from coin import flip
-from constants import BOT_TOKEN
 from covid import covid_stats
 from insults import generate_insult
 from meme import meme_builder
@@ -211,5 +212,4 @@ async def yoda(ctx, *args):
     card = generate_translation(*args)
     await ctx.send(embed=card)
 
-
-bot.run(BOT_TOKEN)
+bot.run(os.getenv('DISCORD_BOT_TOKEN'))
